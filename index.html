@@ -1,5 +1,5 @@
 <html>
-<div align="right">
+<div align="right" class="div1">
 <button onclick="randomize()">Random</button>
 <script type="text/javascript">
     var images = new Array();
@@ -29,23 +29,9 @@
 <h3 align="left">
 
 <i align="left" color="black"> Каталог: </i>
-<p align="center">
+<p align="center" class="p1">
 <script type="text/javascript">
-    var images1 = new Array();
     var k = Math.floor(Math.random() * 10);
-     
-      
-    images[0] = 'https://cdn.discordapp.com/attachments/660206157335363585/935612030839300166/2931.png';
-    images[1] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613424103198760/2920.png';
-    images[2] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613465626824704/3324.png';
-	images[3] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613514435948554/2962.png';
-	images[4] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613683290222663/2968.png';
-	images[5] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613703586459708/2980.png';
-	images[6] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613757235814480/2940.png';
-        images[7] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png';
-        images[8] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613896876765235/2911.png';
-        images[9] = 'https://cdn.discordapp.com/attachments/660206157335363585/935613999440076880/2948.png';
-
     function viewImages() {
         document.getElementById("img_main1").src = images[k]; 
         k++;
@@ -67,7 +53,12 @@
 <strong align="center"> <a href="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg"> Глава партии </a> </strong>
  <dfn align="left" title="только попробуй"> Выйти </dfn>
  </h2>
-<i align="center"> <a href="https://www.fibaro.com/ru/wp-content/uploads/sites/25/2017/02/nav-button.jpg" > кнопка </a></i>
+<div align="center" class="mainstage">
+ <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935613757235814480/2940.png" class="fedorovich bounce"></div> 
+ <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png" class="fedorovich bounce"></div>
+ <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935612030839300166/2931.png" class="fedorovich bounce"></div>  
+ 
+ </div>
 </nav></header>
 <title> Найди Пальшину </title>
 <h1 align="center"> <abbr> <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%8E%D0%B7_%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D1%85_%D0%A1%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA" style="color:black">  a </a></abbr> </h1>
@@ -150,8 +141,16 @@
 <a href="https://bibavan.github.io/insult-jopi/"><strong class="aaa"> попуск </strong> </a>
 </footer>
 <style>
-
-
+.mainstage{
+display:flex;
+justify-content:space-around;
+}
+.p1{
+background:#FCCE40
+}
+.div1{
+background:#746AB0
+}
 body{
 color: white;
 background:#c93939
@@ -186,11 +185,11 @@ border-radius: 15px;
 padding: 15px
 }
 img.palsh {
-opacity: 0
+opacity: 0;
+transition: 2.5s
 }
 img.palsh:hover {
-opacity: 1;
-transition: 5s opacity ease-in
+opacity: 1
 }
 strong.aaa {
   animation-duration: 3s;
@@ -207,6 +206,35 @@ strong.aaa {
     margin-left: 0%;
     width: 100%;
   }
-}
+}	
+.stage {
+        border-bottom: 3px;
+        display: flex;
+        height: 330px;
+        width: 100%;
+    }
+    .fedorovich {
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background-color: #F44336;
+        height: 200px;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 200px;
+    }
+    .bounce {
+        animation-name: bounce;
+        animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    }
+    @keyframes bounce {
+        0%   { transform: scale(1,1)      translateY(0); }
+        10%  { transform: scale(1.1,.9)   translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-100px); }
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        57%  { transform: scale(1,1)      translateY(-7px); }
+        64%  { transform: scale(1,1)      translateY(0); }
+        100% { transform: scale(1,1)      translateY(0); }
+    }
 </style>
  </html>
