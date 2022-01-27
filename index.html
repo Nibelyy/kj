@@ -169,17 +169,17 @@ alert('ДЖЕКПОТ');
 </footer>
 <script type="text/javascript">
 const button1 = document.querySelector('#button1');
-
+ var leverPull = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247605543989288/ezgif.com-gif-maker_1.gif')`;
+ var leverStatic = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png')`;
 function setImage(image) {
   button1.style.setProperty('--background-image', image);
 }
 function changeButtonImage() {
-  var leverPull = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247605543989288/ezgif.com-gif-maker_1.gif')`;
+  setImage(leverStatic);
   setImage(leverPull);
   var timeout1 = setTimeout("resetButtonImage()", 500);
   }
 function resetButtonImage() {
-  var leverStatic = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png')`;
   setImage(leverStatic);
   clearTimeout(timeout1);
   }
