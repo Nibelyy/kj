@@ -53,7 +53,7 @@ var timeout2 = setTimeout("jackpothelp()", 100);
 <h3 align="left">
 
 <div align="center" class="p1">
-<div align="left" color="black" class="ktl"> <i class="outline">Каталог:</i> </div>
+<div align="left" color="black" class="ktl" id="ktl"> <i class="outline">Каталог:</i> </div>
 <div align="right" class="ktl">
 <script type="text/javascript">
     var k = Math.floor(Math.random() * 10);
@@ -75,9 +75,6 @@ var timeout2 = setTimeout("jackpothelp()", 100);
 </div>
 </h3>
 <header><nav>
-<h2 align="center"> 
-<strong align="center"> <a href="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg"> Глава партии </a> </strong>
- </h2>
 <div align="center" class="mainstage">
  <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935613757235814480/2940.png" class="fedorovich bounce"></div> 
  <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png" class="fedorovich bounce"></div>
@@ -193,6 +190,7 @@ function resetButtonImage() {
 <style>
 :root {
    --background-image: url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png');
+   --linear-gradient: 0%;
  }
 
 #button1 {
@@ -217,16 +215,14 @@ color:#ee323c
 .p1{
 background:#FCCE40;
 display:flex;
-justify-content: space-between
+justify-content: space-between;
+border: 2px solid;
+border-color: #334734;
+background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 body{
 color: white;
-background:#c93939
-}
-h2 {
-font-size: 100px;
-color:#d48b17;
-text-decoration: none
+background:#c93939;
 }
 h1{
 width:1840px;
@@ -251,9 +247,12 @@ background:black
   height: 325px;
   background-size: 260px 325px;
   background-repeat:no-repeat;
-  background-image: linear-gradient(to right, #000000 0%,#ffffff 100%), url('https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png');
-  background-blend-mode: difference, normal;
+  
+  background-blend-mode: difference, multiply;
   align-self: flex-end;
+}
+#ktl {
+background-image: linear-gradient(to right, #000000 var(--linear-gradient),#ffffff 100%), url('https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png');
 }
 dfn{
 background: red;
@@ -272,6 +271,11 @@ background:#746AB0;
 display:flex;
 justify-content:safe-center;
 height: 325px;
+background-image: linear-gradient(to bottom, #000000 0%,#ffffff 100%), url('https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png');
+background-size:1920px 325px;
+background-repeat: no-repeat;
+background-blend-mode: difference, normal;
+
 }
 strong.aaa {
   animation-duration: 3s;
@@ -291,9 +295,9 @@ strong.aaa {
     width: 100%;
   }
 }	
-.mainstage{
-display:flex;
-justify-content:space-around;
+.mainstage {
+   display:flex;
+   justify-content:space-around;
 }
 .stage {
         display: flex;
