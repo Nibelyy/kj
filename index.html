@@ -1,6 +1,6 @@
 <html>
 <div align="center" class="div1">
-<button onclick="randomize()">Крутануть</button>
+<button onclick="randomize(), jackpot(), changeButtonImage()" id="button1"></button>
 <script type="text/javascript">
     var images = new Array();
     var i,l,m = 0;
@@ -35,15 +35,18 @@
 <img src="" id="img_main3">
  </div>
 <script type="text/javascript">
-if (i==l) and (i==m) {
+function jackpot() {
+if (i==l && i==m) {
 alert('ДЖЕКПОТ');
+}
 }
 </script>
 </div>
 <h3 align="left">
 
-<i align="left" color="black"> Каталог: </i>
-<p align="center" class="p1">
+<div align="center" class="p1">
+<div align="left" color="black" class="ktl"> <i class="outline">Каталог:</i> </div>
+<div align="right" class="ktl">
 <script type="text/javascript">
     var k = Math.floor(Math.random() * 10);
     function viewImages() {
@@ -60,12 +63,12 @@ alert('ДЖЕКПОТ');
  
 <script> viewImages(); </script>
 <button onclick="viewImages()">Speed up</button>
-</p>
+</div>
+</div>
 </h3>
 <header><nav>
 <h2 align="center"> 
 <strong align="center"> <a href="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg"> Глава партии </a> </strong>
- <dfn align="left" title="только попробуй"> Выйти </dfn>
  </h2>
 <div align="center" class="mainstage">
  <div class="stage"><img src="https://cdn.discordapp.com/attachments/660206157335363585/935613757235814480/2940.png" class="fedorovich bounce"></div> 
@@ -75,8 +78,18 @@ alert('ДЖЕКПОТ');
  </div>
 </nav></header>
 <title> Найди Пальшину </title>
-<h1 align="center"><a style="color:black"> <img src="https://c.tenor.com/0OC2S5gxafIAAAAC/fred-mopping-fred.gif">  <a href="https://bibavan.github.io/insult-jopi/" class="insult-jopi">a </a> </a> </h1>
-<body> 
+<h1 align="left" class="mainstage"> 
+<div class="stage">
+<img src="https://cdn.discordapp.com/attachments/660206157335363585/936256315561488424/ezgif.com-gif-maker_1.gif">
+</div>
+<div class="stage">
+<img src="https://cdn.discordapp.com/attachments/660206157335363585/936256315943186482/ezgif.com-gif-maker_2.gif">
+</div>
+<div class="stage">
+<img src="https://cdn.discordapp.com/attachments/660206157335363585/936256316815577118/ezgif.com-gif-maker.gif">
+</div>
+ </h1>
+<body> <!-- Удалить и добавить в новый файл где картинки и их style будут рандомизированы -->
 <p><img src="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg">
  <img src="https://cdn.discordapp.com/attachments/660206157335363585/935612030839300166/2931.png">
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/2931.f93d8153e4bae606f1ec449a4d218fdc869.jpg">
@@ -119,7 +132,7 @@ alert('ДЖЕКПОТ');
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/2931.f93d8153e4bae606f1ec449a4d218fdc869.jpg">
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/2931.f93d8153e4bae606f1ec449a4d218fdc869.jpg">
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg">
-  <img src="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg"</p>
+  <img src="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg"></p>
   <p><img src="http://226school.ru/stessa/components/phpthumbof/cache/272.f93d8153e4bae606f1ec449a4d218fdc180.jpg">
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/2931.f93d8153e4bae606f1ec449a4d218fdc869.jpg">
  <img src="http://226school.ru/stessa/components/phpthumbof/cache/2931.f93d8153e4bae606f1ec449a4d218fdc869.jpg">
@@ -152,16 +165,53 @@ alert('ДЖЕКПОТ');
  
 </body>
 <footer>
-<a href="https://bibavan.github.io/insult-jopi/"><strong class="aaa"> попуск </strong> </a>
+<a href="https://bibavan.github.io/insult-jopi/"><strong class="aaa"> <img src="https://cdn.discordapp.com/attachments/660206157335363585/936256316496830494/ezgif.com-gif-maker_3.gif" title="Нагиев"> </strong> </a>
 </footer>
+<script type="text/javascript">
+const button1 = document.querySelector('#button1');
+
+function setImage(image) {
+  button1.style.setProperty('--background-image', image);
+}
+function changeButtonImage() {
+  var leverPull = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247605543989288/ezgif.com-gif-maker_1.gif')`;
+  setImage(leverPull);
+  var timeout1 = setTimeout("resetButtonImage()", 500);
+  }
+function resetButtonImage() {
+  var leverStatic = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png')`;
+  setImage(leverStatic);
+  clearTimeout(timeout1);
+  }
+</script>
 <style>
+:root {
+   --background-image: url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png');
+ }
+
+#button1 {
+   background-image: var(--background-image);
+   width:106px;
+   background-repeat:no-repeat;
+   background-size: 106px 325px;
+ }
+.outline {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+i{
+align: center;
+font-family:consolas;
+font-size: 45px
+}
 .insult-jopi {
 text-decoration: none;
 color:#ee323c
 }
-
 .p1{
-background:#FCCE40
+background:#FCCE40;
+display:flex;
+justify-content: space-between
 }
 body{
 color: white;
@@ -173,23 +223,31 @@ color:#d48b17;
 text-decoration: none
 }
 h1{
+width:1840px;
+height:492px;
 text-decoration: none;
 background: #ffffff;
+background-image: url('https://cdn.discordapp.com/attachments/660206157335363585/936261991109132358/unknown.png');
+background-repeat: no-repeat;
+background-size: 110% 140%;
 margin: 20px;
 padding: 100px:
 color: #000000;
 border: 1px solid black;
+justify-content: space-around;
 }
 h2:hover{
 color:#8fce00;
 background:black
 }
-i {
-border: yellow;
-background: #d3f3c7; 
-font-size: 100px;
-align: center;
-color: black
+.ktl {
+  width: 260px;
+  height: 325px;
+  background-size: 260px 325px;
+  background-repeat:no-repeat;
+  background-image: linear-gradient(to right, #000000 0%,#ffffff 100%), url('https://cdn.discordapp.com/attachments/660206157335363585/935613843097387029/272.png');
+  background-blend-mode: difference, normal;
+  align-self: flex-end;
 }
 dfn{
 background: red;
@@ -218,7 +276,7 @@ strong.aaa {
 
 @keyframes slidein {
   from {
-    margin-left: 95%;
+    margin-left: 90%;
     width: 300%;
   }
 
@@ -232,7 +290,6 @@ display:flex;
 justify-content:space-around;
 }
 .stage {
-        border-bottom: 3px;
         display: flex;
         height: 330px;
         width: 100%;
