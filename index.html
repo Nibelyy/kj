@@ -35,10 +35,14 @@
 <img src="" id="img_main3">
  </div>
 <script type="text/javascript">
-function jackpot() {
+function jackpothelp() {
 if (i==l && i==m) {
 alert('ДЖЕКПОТ');
 }
+clearTimeout(timeout2);
+}
+function jackpot() {
+var timeout2 = setTimeout("jackpothelp()", 100);
 }
 </script>
 </div>
@@ -169,14 +173,14 @@ alert('ДЖЕКПОТ');
 </footer>
 <script type="text/javascript">
 const button1 = document.querySelector('#button1');
- var leverPull = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247605543989288/ezgif.com-gif-maker_1.gif')`;
+ var leverPull = `url('https://cdn.discordapp.com/attachments/660206157335363585/936282618910101555/ezgif.com-gif-maker.gif')`;
  var leverStatic = `url('https://cdn.discordapp.com/attachments/660206157335363585/936247672359239761/frame_10_delay-0.png')`;
 function setImage(image) {
   button1.style.setProperty('--background-image', image);
 }
 function changeButtonImage() {
   setImage(leverPull);
-  var timeout1 = setTimeout("resetButtonImage()", 500);
+  var timeout1 = setTimeout("resetButtonImage()", 400);
   }
 function resetButtonImage() {
   setImage(leverStatic);
