@@ -126,7 +126,7 @@ function resetButtonImage() {
 <script type="text/javascript">
 var u = 0;
 var v = 1;
-var timeInterval = Math.floor(Math.random() * 1401 + 500);
+var timeInterval = Math.floor(Math.random() * 1501 + 9000);
 const gradientPercentage = document.querySelector('#ktl');
 const gradientDegreeOfRotation = document.querySelector('#ktl');
 function setGradientPercentage(scale) {
@@ -145,7 +145,7 @@ function setGradientPercentage(scale) {
  }
 function setGradientDegreeOfRotation(degree) {
   gradientDegreeOfRotation.style.setProperty('--gradient-degree-of-rotation', degree +'deg');
-  timeInterval = Math.floor(Math.random() * 1401 + 500);
+  timeInterval = Math.floor(Math.random() * 1501 + 9000);
   setTimeout("randomizeGradientDegreeOfRotation()", timeInterval);
   }
 function randomizeGradientDegreeOfRotation() {
